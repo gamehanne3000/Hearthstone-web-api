@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+// import neccesery libraries
+import "./App.css";
+import Nav from "./Nav";
+import Home from "./Components/Home";
+import CardBack from "./Components/CardBack";
+import CardBackDetail from "./Components/CardBackDetail";
+import CardSet from "./Components/CardSet";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="root">
+        <Nav />
+        <Switch>
+          <Route path="/" exact component={Home} />{" "}
+          {/* exact tells the router to only show if this is given -> otherwise it will always listen to this first */}
+          <Route path="/cardBack" exact component={CardBack} />
+          <Route path="/cardBack/:id" component={CardBackDetail} />
+          <Route path="/cardSet" component={CardSet} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
