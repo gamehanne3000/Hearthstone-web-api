@@ -6,10 +6,10 @@ function CardBack() {
   const [cardBack, setCardBack] = useState([]);
 
   useEffect(() => {
-    fetch("https://omgvamp-hearthstone-v1.p.rapidapi.com/cardbacks", {
+    fetch("---", {
       method: "GET",
       headers: {
-        "x-rapidapi-key": "3cd1410e14mshb2dc5c731d49f95p156c6fjsn9207d364f9b2",
+        "x-rapidapi-key": "---",
         "x-rapidapi-host": "omgvamp-hearthstone-v1.p.rapidapi.com",
       },
     })
