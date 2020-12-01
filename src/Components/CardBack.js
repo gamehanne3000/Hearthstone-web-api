@@ -33,7 +33,6 @@ function CardBack() {
             {cardBack.map((cardback) => (
               // must be wrapped in an parent alement for JSX to work
               <div key={cardback.cardBackId}>
-                {"key => This way React can handle the DOM change. "}
                 <Link
                   key={cardback.cardBackId}
                   className="onFocus"
